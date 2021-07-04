@@ -1,0 +1,72 @@
+
+
+.container{
+    background-color: rgb(165, 16, 16);
+    position: absolute;
+    width: 99%;
+    height: 49vh;
+    text-align: center;
+    color: #fff;
+    top: 0;
+    border: 0.7vh solid rgb(30, 49, 41);
+
+}
+h1{
+    font-family: sans-serif;
+    color: white;
+    display: block;
+
+}
+.s1{
+    width: 10rem;
+    height: 10rem;
+    display: inline-block;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: 1s spin infinite ease-in-out;
+}
+
+@keyframes spin{
+    to{
+        transform: rotate(360deg);
+    }
+}
+.container_d{
+background-color: yellowgreen;
+height: 49vh;
+width: 99%;
+position: absolute;
+bottom: 0;
+text-align: center;
+border: 0.7vh solid rgb(30, 49, 41);
+
+}
+.loading-dots >div{
+    height: 2rem;
+    width: 2rem;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    animation: 1.5s animation-dots infinite ease-in-out both;
+    
+}
+.loading-dots .d_1{
+animation-delay: -0.30s;
+}
+.loading-dots .d_2{
+   animation-delay:  -0.60s;
+}
+.loading-dots .d_3{
+    animation-delay:  -0.90s;
+}
+
+@keyframes animation-dots{
+0%,80%,100%{
+transform: scale(0);
+}
+40%{
+    transform: scale(1);
+}
+
+}

@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bg-color:#324761;
+}
+body{
+    background-color: var(--bg-color);
+}
+.form h1{
+text-transform: uppercase;
+color: white;
+text-align: center;
+margin-top: 50px;
+font-weight: normal;
+
+}
+.form {
+    width: 400px;
+    height: 400px;
+    background-color: #1b191b;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-family: sans-serif;
+
+}
+
+.form input[type = "text"] , .form input[type = "password"]:focus{
+    caret-color: white;
+    color: white;
+}
+
+
+.form input[type = "text"] , .form input[type = "password"]{
+    border: 0;
+    background: none;
+    text-align: center;
+    display: block;
+    margin: 30px auto;
+padding: 20px 40px;
+border: 3px solid #3498db;
+border-radius: 50px;
+outline: none;
+width: 230px;
+transition: 0.25s;
+text-align: center;
+}
+.form input[type = "text"]:focus , .form input[type = "password"]:focus {
+   border-color: #26a85c;
+    width: 330px;
+}
+.form input[type="submit"]{
+
+border: none;
+background:none;
+outline: none;
+color: white;
+padding: 20px 40px;
+border: 3px solid #26a85c;
+border-radius: 30px;
+margin: auto 140px;
+}
+.form input[type="submit"]:hover{
+    background-color: #21aa6a;
+}
+.form a{
+
+color: white;
+position: absolute;
+bottom: 3px;
+left: 3px;
+}
+
+/* .form :first-of-type[type="text"]{
+
+} */
