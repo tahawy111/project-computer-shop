@@ -1,0 +1,39 @@
+/* Start global rule */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap');
+
+
+/* End global rule */
+
+
+:root{
+    --widthhurt: 100px;
+    --he-color: ;
+}
+
+body{
+    background-color: #1c1c1c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: rgb(46, 44, 41);
+}
+.hurt{
+    position: relative;
+    width: var(--widthhurt);
+    height: 160px;
+    background: red;
+    transform: rotate(45deg);
+    border-radius: calc(var(--widthhurt)/2) calc(var(--widthhurt)/2) 0 0;
+}
+.hurt::before{
+    content: "";
+    position: absolute;
+    width: var(--widthhurt);
+    height: 160px;
+    background: red;
+    transform: rotate(-90deg);
+    border-radius: calc(var(--widthhurt)/2) calc(var(--widthhurt)/2) 0 0;
+    left: -30px;
+    bottom: -30px;
+}

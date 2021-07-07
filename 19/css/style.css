@@ -1,0 +1,51 @@
+/* Start global rule */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap');
+
+
+/* End global rule */
+
+
+:root{
+    --widthhurt: 100px;
+    --he-color: ;
+}
+
+body{
+    background-color: #1c1c1c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: rgb(46, 44, 41);
+}
+.star{
+    position: relative;
+    height: 0;
+    width: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid red;
+    transform: rotate(35deg);
+}
+.star::before{
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid red;
+    transform: rotate(-70deg);
+    left: -100px;
+}
+.star::after{
+    position: absolute;
+    content: "";
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 80px solid red;
+    transform: rotate(-35deg);
+    top: -45px;
+    left:-60px ;
+}
+
