@@ -5,11 +5,13 @@
 :root {
   --main-padding: 20px;
   --main-margin: 70px;
-  --main-color-font: #ff4d4d;
+  --main-color-font: #ff3838;
+  --myInterest-grid: 45vw;
 }
 /* Global Code */
 
 /*start header and start(nav) */
+
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
     url(../images/Bg-Page.jpg);
@@ -25,55 +27,26 @@ header nav {
   height: 90px;
   justify-content: space-evenly;
   font-size: 20px;
+  padding-bottom: 100px;
 }
+
+@media (max-width: 321px) {
+  .landing p {
+    display: none;
+  }
+  .landing a[href="#"] {
+    display: none;
+  }
+}
+
 @media (max-width: 411px) {
-  header nav {
-    min-width: 100%;
-    height: 100px;
-    display: inline-block;
-    margin-bottom: 200px;
-    position: absolute;
+  header nav ul {
+    display: none;
   }
-  header nav li {
-    display: inline-block;
-    width: 20px;
-  }
-  .landing > :nth-child(1) {
-    font-size: 2rem;
-  }
-  .landing > :nth-child(2) {
-    font-size: 2rem;
-  }
-  .landing > :nth-child(3) {
-    font-size: 2rem;
-  }
-}
-@media (max-width: 322px) {
-  header nav {
-    min-width: 100%;
-    height: 50px;
-    display: inline;
-    position: absolute;
-    z-index: 2;
-  }
-  header nav li {
-    display: inline-block;
-    width: 20px;
-  }
-  .landing > :nth-child(1) {
-    margin-top: 70px;
-    font-size: 1rem;
-  }
-  .landing > :nth-child(2) {
-    margin-top: 70px;
-    font-size: 1rem;
-  }
-  .landing > :nth-child(3) {
-    margin-top: 70px;
-    font-size: 1rem;
-  }
-  .landing > :nth-child(5) {
-    font-size: 5px;
+  .ABOUT_ME .content img {
+    position: relative;
+    left: -10%;
+    transform: translateX(-0%);
   }
 }
 header nav li {
@@ -127,10 +100,10 @@ header nav .logo img {
 /* Start landing*/
 
 .landing {
-  position: absolute;
+  position: relative;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -120%);
+  transform: translate(-50%, -150%);
   margin-top: 150px;
   text-align: center;
 }
@@ -274,6 +247,41 @@ header nav .logo img {
     justify-content: center;
   }
 }
+@media (max-width: 750px) {
+  .ABOUT_ME .content {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (max-width: 400px) {
+  section h1 {
+    font-size: 2px;
+  }
+  .ABOUT_ME .content {
+    display: flex;
+    justify-content: center;
+  }
+  .ABOUT_ME .content img {
+    width: 80%;
+  }
+}
+@media (max-width: 474px) {
+  .My_Interest .content p {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+@media (max-width: 548px) {
+  .ABOUT_ME .content {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 570px) {
+  header nav ul {
+    display: none;
+  }
+}
 
 /* End About Me */
 
@@ -329,7 +337,7 @@ header nav .logo img {
 
 .My_Interest {
   position: relative;
-  padding-bottom: 500px;
+  padding-bottom: 70px;
 }
 .My_Interest h1 {
   padding-top: var(--main-margin);
@@ -352,21 +360,30 @@ header nav .logo img {
 }
 .My_Interest .content {
   display: flex;
-  flex-direction: row-reverse;
   margin-top: 30px;
+  width: 100%;
+  height: auto-fit;
+  flex-direction: row;
 }
-.My_Interest .content img {
-  position: absolute;
-  left: 0%;
+@media (max-width: 650px) {
+  .My_Interest .content img {
+    justify-content: center;
+  }
+  .My_Interest .content {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 .My_Interest .content p {
-  position: absolute;
-  right: 100px;
-  margin-top: 100px;
-  text-align: center;
-  width: 300px;
+  padding-top: var(--main-margin);
   font-size: 1.1rem;
   line-height: 1.5;
+  margin-left: 0;
+  text-align: center;
+}
+.My_Interest .content img {
+  display: flex;
+  justify-content: center;
 }
 .My_Interest::after {
   content: "";
@@ -379,20 +396,21 @@ header nav .logo img {
 }
 /* End My Interst */
 
-/* Start Team Work */
-.teamWork {
+/* Start My Work */
+.myWork {
+  position: relative;
   padding: var(--main-margin) 0;
 }
-.teamWork h1 {
+.myWork h1 {
   text-align: center;
   text-transform: uppercase;
   font-size: 3rem;
 }
-.teamWork h1 span {
+.myWork h1 span {
   position: relative;
   text-shadow: 1.1px 1px 2px var(--main-color-font);
 }
-.teamWork h1 span::after {
+.myWork h1 span::after {
   content: "";
   position: absolute;
   height: 5px;
@@ -401,5 +419,107 @@ header nav .logo img {
   bottom: 8px;
   width: 100%;
 }
-@media ()
-/* End Team Work */
+
+.myWork .content .iframe-container {
+  width: 100%;
+  height: 0;
+  position: relative;
+  padding-bottom: 56.25%;
+}
+.myWork .content iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.myWork::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 15px;
+  background-color: #ddd;
+  left: 0;
+  bottom: 0;
+}
+/* End My Work */
+
+/* Start Connect Me */
+
+.CONNECT-ME h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+.CONNECT-ME h1 span {
+  position: relative;
+  text-shadow: 1.1px 1px 2px var(--main-color-font);
+}
+.CONNECT-ME h1 span::after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  background-color: var(--main-color-font);
+  left: 0;
+  bottom: 8px;
+  width: 100%;
+}
+.CONNECT-ME .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+  justify-items: center;
+  gap: 100px 50px;
+  padding: var(--main-margin) 0;
+  color: var(--main-color-font);
+}
+.CONNECT-ME .content span {
+  font-size: 1.5rem;
+  font-weight: 750;
+}
+.CONNECT-ME .content a {
+  text-decoration: none;
+  color: var(--main-color-font);
+  padding-top: 100px;
+}
+.CONNECT-ME .content a:hover {
+  background-color: var(--main-color-font);
+  padding: 13px 7px;
+  border-radius: 6px;
+  color: white;
+  transition: 0.8s;
+  transform-origin: bottom;
+}
+
+/* End Connect Me */
+
+/* Start footer */
+footer {
+  position: relative;
+  padding: 30px 0;
+  width: 100%;
+  background-color: #202020;
+}
+footer p {
+  color: #fff;
+  height: 30px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+footer::before {
+  content: "";
+  background-color: var(--main-color-font);
+  width: 100%;
+  position: absolute;
+  height: 5px;
+  top: 0;
+}
+footer::after {
+  content: "";
+  background-color: var(--main-color-font);
+  width: 100%;
+  position: absolute;
+  height: 4.5px;
+  bottom: 0;
+}
+/* End footer */
